@@ -28,3 +28,6 @@ body-parser(parsing from request body),
 nodemailer(send mail from one Email from node)
 
 Need MYSQL Local Server to try this one out! check out dev.mysql.com and download it from there!
+
+In .env
+use your own email id and password for sending mails with node 
