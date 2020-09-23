@@ -1,0 +1,27 @@
+<link href="/css/main.css" rel="stylesheet" type="text/css">
+<link href="/css/w3.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="w3-bar w3-medium">
+    <a href="/"  class="w3-bar-item w3-xxlarge">LOGO</a>
+    <a href="/accounts/register"  class="w3-bar-item w3-button  w3-hover-green w3-right">Register</a>
+</div>
+<div class="w3-card-4 w3-display-middle w3-half">
+  <div class="w3-container">
+    <h1 class="w3-center  w3-blue">Login</h1>
+    <form method="post" class="form" action="">
+     <div>
+        <label>Email:</label>
+        <input class="w3-input w3-border-bottom w3-light-gray" type="email" maxlength="45" minlength="6" name="email" required>
+     </div>
+     <div>
+        <label>Password:</label>
+        <input class="w3-input w3-border-bottom w3-light-gray" type="password" minlength="6" maxlength="45" name="password" required>
+     </div>
+     <div>
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <p><input class="w3-button w3-green w3-hover-blue w3-round-xlarge" type="submit"> 
+        <a href="/accounts/reset-password" class="w3-right">Forgot your Password?</a>
+     </div>
+    </form>
+  </div>
+</div>

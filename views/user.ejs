@@ -1,0 +1,22 @@
+<link href="/css/main.css" rel="stylesheet" type="text/css">
+<link href="/css/w3.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="w3-bar w3-medium">
+    <a href="/user/<%= user_id %>"  class="w3-bar-item w3-xxlarge">LOGO</a>
+    <a href="/accounts/logout"  class="w3-bar-item w3-button  w3-hover-red w3-right">Logout</a>
+</div>
+<h1 class="w3-center">Welcome back!</h1>
+<div class="w3-card-4 w3-display-middle w3-half"><br>
+    <div class="w3-container">
+<label>Name</label>
+<p class="w3-input"><%= JSON.stringify(rows[0].name).split('\"')[1] %></p>
+<label>Age</label>
+<p class="w3-input"><%= JSON.stringify(rows[0].age) %></p>
+<% const dob = JSON.stringify(rows[0].dob).replace('\"','').split("T") %>
+<label>Date of Birth</label>
+<p class="w3-input"><%= dob[0] %></p>
+<p><a class="w3-button w3-right w3-hover-green w3-blue w3-round" href="/user/edit/<%= user_id %>">Edit</a></p>
+    </div><br>
+</div>
+
+

@@ -1,0 +1,25 @@
+
+html{
+   margin: 0;
+   
+   padding: 0; 
+
+   box-sizing: border-box;
+
+   font-family: "Heebo",sans-serif;
+}
+a{
+   text-decoration: none; 
+   
+   padding: 0rem 3 rem; 
+}
+main{
+   min-height: 100vh;
+   background: url("../img/home.jpg");
+   background-size: cover;
+   background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+   padding: 3rem 5rem;
+   color:white;
+}

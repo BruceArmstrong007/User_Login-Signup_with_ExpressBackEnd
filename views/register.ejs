@@ -1,0 +1,37 @@
+<link href="/css/main.css" rel="stylesheet" type="text/css">
+<link href="/css/w3.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="w3-bar w3-medium">
+    <a href="/"  class="w3-bar-item w3-xxlarge">LOGO</a>    
+    <a href="/accounts/login"  class="w3-bar-item w3-button  w3-hover-blue w3-right">Login</a>
+</div>
+<div class="w3-card-4 w3-display-middle w3-half">
+  <div class="w3-container">
+    <h1 class="w3-center  w3-blue">Register</h1>
+<form method="post" class="form" action="">
+    <div>
+        <label>Email:</label>
+        <input type="email" class="w3-input w3-border-bottom w3-light-gray" maxlength="45" minlength="6" name="email" id="email" required>
+        <p><a href="#" id="verify" class="w3-button w3-right w3-blue w3-hover-green w3-round" onclick="show(document.getElementById('email').value,true)">Verify</a></p>
+        </div>
+        <br>
+        <br>
+    <input type="hidden" name="_csrf" id="csrf" value="<%= csrfToken %>">
+   
+    <div>
+        <label>Verification Code:</label>
+        <input type="number" class="w3-input w3-border-bottom w3-light-gray" name="verify" required>
+    </div>
+    <div>
+        <label>Password:</label>
+        <input type="password" class="w3-input w3-border-bottom w3-light-gray" minlength="6" class="w3-input w3-border-bottom w3-light-gray" maxlength="45" name="password" required>
+    </div>
+    <div>
+        <label>Re-Enter Password:</label>
+        <input type="password" class="w3-input w3-border-bottom w3-light-gray" minlength="6" maxlength="45" name="repeat_password" required>
+    </div> 
+    <p><input class="w3-button w3-green w3-hover-blue w3-round-xlarge" type="submit"></p>  
+</form>
+</div>
+</div>
+<script src="/js/main.js"></script>
